@@ -11,7 +11,7 @@
       <b-list-group>
         <!-- each item in for loop needs a unique identifier key. Can use index -->
         <b-list-group-item
-            v-for="(answer, index) in answers" 
+            v-for="(answer, index) in shuffledAnswers" 
             :key="index"
             @click="selectAnswer(index)"
             :class="answerClass(index)"

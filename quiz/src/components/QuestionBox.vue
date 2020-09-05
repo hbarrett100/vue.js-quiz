@@ -29,7 +29,7 @@
       <b-button 
       @click="next" 
       variant="success"
-      :disabled="!answered"
+      :disabled="!answered || this.numTotal === 10"
       >
       Next Question</b-button>
     </b-jumbotron>
@@ -44,7 +44,8 @@ export default {
   props: {
     currentQuestion: Object,
     next: Function,
-    increment: Function
+    increment: Function,
+    numTotal: Number
   },
 
     // define all variables
